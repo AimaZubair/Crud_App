@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class contactus extends StatelessWidget {
-  static const String routeName = '/contact';
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,7 +19,6 @@ class contactus extends StatelessWidget {
                   'Contact Us',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontFamily: 'Roboto-Italic',
                     fontSize: 40.0,
                   ),
                 ),

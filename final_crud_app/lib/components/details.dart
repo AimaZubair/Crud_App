@@ -15,7 +15,7 @@ class Details extends StatefulWidget {
 
 class _DetailsState extends State<Details> {
   void deleteData() {
-    var url = "http://192.168.1.100/dashboard/crud/deletedata.php";
+    var url = "http://192.168.10.7/dashboard//cruddeletedata.php";
 
     http.post(url, body: {
       "id": widget.list[widget.index]['id'],
@@ -87,20 +87,6 @@ class _DetailsState extends State<Details> {
               ),
               new Text(
                 widget.list[widget.index]['mobile'],
-                style: new TextStyle(fontSize: 20.0),
-              ),
-              SizedBox(
-                height: 10.0,
-              ),
-              new Text(
-                widget.list[widget.index]['skill'],
-                style: new TextStyle(fontSize: 20.0),
-              ),
-              SizedBox(
-                height: 10.0,
-              ),
-              new Text(
-                widget.list[widget.index]['bloodgroup'],
                 style: new TextStyle(fontSize: 20.0),
               ),
               SizedBox(

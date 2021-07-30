@@ -15,7 +15,7 @@ class _AddDataState extends State<AddData> {
   TextEditingController address = new TextEditingController();
 
   void addData() {
-    var url = "http://192.168.1.100/dashboard/crud/adddata.php";
+    var url = "http://192.168.10.7/dashboard/crud/adddata.php";
     http.post(url, body: {
       "id": id.text,
       "name": name.text,
@@ -86,7 +86,7 @@ class _AddDataState extends State<AddData> {
                         color: Colors.white,
                       ),
                     ),
-                    color: Colors.green,
+                    color: Colors.blue,
                   )
                 ],
               ),

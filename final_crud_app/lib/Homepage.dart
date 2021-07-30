@@ -4,6 +4,7 @@ import 'dart:async';
 import 'package:http/http.dart' as http;
 import 'package:final_crud_app/components/adddata.dart';
 import 'package:final_crud_app/components/details.dart';
+import 'package:final_crud_app/components/drawer.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -16,7 +17,7 @@ class Home extends StatefulWidget {
 class HomeState extends State<Home> {
   Future<List> getData() async {
     final response =
-        await http.get("http://192.168.1.100/dashboard/crud/getdata.php");
+        await http.get("http://192.168.10.7/dashboard/crud/getdata.php");
     return json.decode(response.body);
   }
 
@@ -26,9 +27,10 @@ class HomeState extends State<Home> {
     return new Scaffold(
       appBar: new AppBar(
         title: new Text(
-          "CRUD Form",
+          "CRUD App",
         ),
       ),
+      drawer: drawer(),
       floatingActionButton: new FloatingActionButton(
         onPressed: () => Navigator.of(context).push(
           new MaterialPageRoute(

@@ -21,7 +21,7 @@ class _EditDataState extends State<EditData> {
   TextEditingController mobile;
   TextEditingController address;
   void editData() {
-    var url = "http://192.168.1.100/dashboard/crud/editdata.php";
+    var url = "http://192.168.10.7/dashboard/crud/editdata.php";
 
     http.post(url, body: {
       "id": widget.list[widget.index]['id'],
@@ -95,7 +95,7 @@ class _EditDataState extends State<EditData> {
                       color: Colors.white,
                     ),
                   ),
-                  color: Colors.green,
+                  color: Colors.blue,
                 )
               ],
             ),
